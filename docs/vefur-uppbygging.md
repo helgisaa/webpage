@@ -57,6 +57,22 @@ components/ButtonLink.js   Hnappur sem virkar fyrir innri og ytri tengla
 
 Ef þú ert bara að breyta texta byrjarðu ekki hér. Byrjaðu í `data/site-content.js`.
 
+## Meðferðarúrræðin
+
+Síðan `Meðferðarúrræðin` er venjuleg undirsíða í `data/site-content.js`, en hún notar aukahlutann `treatmentResources`.
+
+Þar eru fimm úrræði sett fram sem einföld kort:
+
+- `Vogur` fyrir afeitrun, greiningu og fyrstu skref.
+- `Vík` fyrir inniliggjandi meðferð, að jafnaði fjórar vikur.
+- `Von` fyrir göngudeild, dagmeðferð, fjölskylduþjónustu og eftirfylgd.
+- `Vin` fyrir búsetuúrræði og félagslega endurhæfingu.
+- `LOF` fyrir lyfjameðferð og göngudeildarmeðferð við ópíóíðafíkn.
+
+Hvert kort hefur `label`, `title`, `duration`, `text`, `points`, `icon` og `image`. Icon heitin eru skilgreind í `components/ContentPage.js`. Myndirnar koma úr `public/assets/images/`.
+
+Neðst á síðunni er `pathway`, sem útskýrir í einföldum skrefum að fólk þarf ekki að velja rétta úrræðið sjálft. Faglegt mat og fyrsta samtal hjálpa til við að raða úrræðunum saman.
+
 ## Valmynd og megamenu
 
 Aðalvalmyndin er vísvitandi stutt. Hún notar `megaMenu` í `data/site-content.js` og skiptir undirleiðum í dálka.

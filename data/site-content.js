@@ -117,6 +117,7 @@ export const siteContent = {
             links: [
               { label: "Fyrstu skrefin", href: "/eg-tharf-hjalp" },
               { label: "Ef staðan er bráð", href: "/hjalp-strax" },
+              { label: "Meðferðarúrræðin", href: "/medferdarurraedi" },
               { label: "Aðstandendur", href: "/adstandendur" }
             ]
           },
@@ -124,6 +125,7 @@ export const siteContent = {
             title: "Meðferð",
             links: [
               { label: "Meðferð og þjónusta", href: "/medferd-og-thjonusta" },
+              { label: "Meðferðarúrræðin", href: "/medferdarurraedi" },
               { label: "Vogur", href: "/medferd-og-thjonusta#vogur" },
               { label: "Vík", href: "/medferd-og-thjonusta#vik" },
               { label: "Göngudeild og dagdeild", href: "/medferd-og-thjonusta#gongudeild" }
@@ -388,7 +390,7 @@ export const siteContent = {
       mapLabel: "sjá kort",
       quickLinks: [
         { label: "Fyrstu skrefin", href: "/eg-tharf-hjalp" },
-        { label: "Meðferðarleiðir", href: "/medferd-og-thjonusta" },
+        { label: "Meðferðarúrræðin", href: "/medferdarurraedi" },
         { label: "Um SÁÁ", href: "/um-saa" },
         { label: "Hafa samband", href: "mailto:saa@saa.is" }
       ],
@@ -482,6 +484,138 @@ export const siteContent = {
             id: "spilafikn",
             body:
               "SÁÁ býður ráðgjöf, meðferð og stuðningshópa fyrir fólk sem glímir við vanda vegna fjárhættuspils. Aðstandendur geta einnig sótt ráðgjöf."
+          }
+        ]
+      },
+      resources: {
+        slug: "medferdarurraedi",
+        title: "Meðferðarúrræðin",
+        eyebrow: "Hvernig úrræðin vinna saman",
+        intro:
+          "SÁÁ býður upp á nokkur úrræði sem geta raðast saman eftir stöðu hvers og eins. Sumir byrja á Vogi, fara síðan í Vík og halda áfram í Von. Aðrir byrja í göngudeild, nýta LOF eða þurfa búsetustuðning í Vin.",
+        ctaLabel: "Hringja í 530 7600",
+        ctaHref: "tel:+3545307600",
+        treatmentResources: {
+          eyebrow: "Einfalt yfirlit",
+          heading: "Fimm úrræði sem mynda eina meðferðarleið.",
+          text:
+            "Þú þarft ekki að vita fyrirfram hvaða úrræði á við. Fyrsta samtal og faglegt mat hjálpar til við að velja næsta skref.",
+          note:
+            "Úrræðin geta tengst saman á ólíkan hátt. Röðin fer eftir heilsu, neyslusögu, aðstæðum heima, stuðningi og markmiðum hvers einstaklings.",
+          items: [
+            {
+              id: "vogur",
+              icon: "hospital",
+              image: "/assets/images/hero-fyrstu-skrefin.png",
+              label: "Afeitrun og fyrstu skref",
+              title: "Vogur",
+              duration: "Oftast um 7-10 dagar, eftir mati og aðstæðum.",
+              text:
+                "Vogur er sjúkrahús þar sem fólk fær afeitrun, greiningu, læknisfræðilegt mat og fyrstu meðferðarskref.",
+              points: [
+                "Fyrir fólk í fráhvörfum eða undir áhrifum.",
+                "Læknir og teymi meta líkamlega og andlega stöðu.",
+                "Næsta skref getur verið Vík, Von, LOF eða önnur eftirfylgd."
+              ]
+            },
+            {
+              id: "vik",
+              icon: "calendar",
+              image: "/assets/images/banner-sumarhatid.jpg",
+              label: "Inniliggjandi meðferð",
+              title: "Vík",
+              duration: "Að jafnaði 4 vikur / 28 dagar.",
+              text:
+                "Vík tekur oft við eftir Vog þegar lágmarksjafnvægi er náð. Þar er skipulögð meðferð með fræðslu, hópum, verkefnavinnu og einstaklingsviðtölum.",
+              points: [
+                "Dagskipulag, hreyfing, svefn, matur og stuðningur.",
+                "Áfallamiðuð og félagsleg nálgun.",
+                "Undirbúningur fyrir daglegt líf eftir inniliggjandi meðferð."
+              ]
+            },
+            {
+              id: "von",
+              icon: "users",
+              image: "/assets/images/banner-gongudeild-von.png",
+              label: "Göngudeild og dagmeðferð",
+              title: "Von",
+              duration: "Mismunandi lengd, oft dagmeðferð og eftirfylgd.",
+              text:
+                "Von er göngudeild SÁÁ í Efstaleiti. Þar er viðtalsþjónusta, greining, dagmeðferð, fjölskylduþjónusta og eftirfylgd.",
+              points: [
+                "Hentar sumum án innlagnar.",
+                "Getur komið á undan eða eftir Vogi og Vík.",
+                "Styður fólk áfram í daglegu lífi."
+              ]
+            },
+            {
+              id: "vin",
+              icon: "home",
+              image: "/assets/images/hero-thjonusta-fjolskyldur.png",
+              label: "Áfangaheimili",
+              title: "Vin",
+              duration: "Langtímastuðningur eftir þörfum.",
+              text:
+                "Vin er búsetuúrræði og áfangaheimili þar sem áhersla er á stöðugleika, félagslega endurhæfingu og stuðning í bata.",
+              points: [
+                "Fyrir fólk sem þarf öruggari umgjörð eftir meðferð.",
+                "Styður daglegt líf, tengsl og ábyrgð.",
+                "Getur tengst áframhaldandi göngudeild og stuðningi."
+              ]
+            },
+            {
+              id: "lof",
+              icon: "pill",
+              image: "/assets/images/banner-spilafikn.png",
+              label: "Ópíóíðafíkn",
+              title: "LOF",
+              duration: "Langtíma göngudeildarmeðferð með reglulegri eftirfylgd.",
+              text:
+                "LOF er lyfjameðferð og göngudeildarþjónusta við ópíóíðafíkn. Meðferðin byggir á heildarmati, einstaklingsmiðaðri áætlun og eftirfylgd heilbrigðisstarfsfólks.",
+              points: [
+                "Getur hafist á Vogi eða í göngudeild.",
+                "Lyf og eftirfylgd eru stillt eftir þörfum hvers einstaklings.",
+                "Samstarf getur verið við apótek, heilsugæslu og aðra þjónustu."
+              ]
+            }
+          ],
+          pathwayEyebrow: "Hvernig púslið raðast",
+          pathwayTitle: "Það er ekki ein rétt leið fyrir alla.",
+          pathway: [
+            {
+              icon: "heart",
+              title: "Fyrsta samband",
+              text:
+                "Þú hringir, pantar viðtal eða færð ráðgjöf. Markmiðið er að skilja stöðuna og finna næsta skref."
+            },
+            {
+              icon: "hospital",
+              title: "Mat og afeitrun ef þarf",
+              text:
+                "Sumir þurfa Vog fyrst. Aðrir geta byrjað í Von eða fengið sértækt mat fyrir LOF."
+            },
+            {
+              icon: "calendar",
+              title: "Meðferð og æfing",
+              text:
+                "Vík, Von, LOF og önnur úrræði styðja fólk við að byggja upp nýja færni og stöðugleika."
+            },
+            {
+              icon: "home",
+              title: "Stuðningur áfram",
+              text:
+                "Vin, göngudeild, hópar og fjölskylduþjónusta geta stutt langtímabata eftir þörfum."
+            }
+          ],
+          ctaTitle: "Veistu ekki hvað á við?",
+          ctaText:
+            "Það er eðlilegt. Þú þarft ekki að velja rétta úrræðið einn. Hafðu samband og fáðu leiðsögn."
+        },
+        sections: [
+          {
+            title: "Mikilvægt",
+            body:
+              "Upplýsingarnar hér eru einfalt yfirlit. Endanleg meðferðaráætlun er alltaf metin út frá stöðu, heilsu og aðstæðum hvers einstaklings."
           }
         ]
       },
@@ -647,6 +781,7 @@ export const siteContent = {
             links: [
               { label: "I need help", href: "/need-help" },
               { label: "If the situation is urgent", href: "/urgent-help" },
+              { label: "Treatment options", href: "/treatment-options" },
               { label: "Family and loved ones", href: "/families" }
             ]
           },
@@ -654,6 +789,7 @@ export const siteContent = {
             title: "Treatment",
             links: [
               { label: "Treatment and services", href: "/treatment-and-services" },
+              { label: "Treatment options", href: "/treatment-options" },
               { label: "Vogur", href: "/treatment-and-services#vogur" },
               { label: "Vík", href: "/treatment-and-services#vik" },
               { label: "Outpatient and day treatment", href: "/treatment-and-services#outpatient" }
@@ -918,7 +1054,7 @@ export const siteContent = {
       mapLabel: "see map",
       quickLinks: [
         { label: "First steps", href: "/need-help" },
-        { label: "Treatment pathways", href: "/treatment-and-services" },
+        { label: "Treatment options", href: "/treatment-options" },
         { label: "About SÁÁ", href: "/about-saa" },
         { label: "Contact us", href: "mailto:saa@saa.is" }
       ],
@@ -1012,6 +1148,138 @@ export const siteContent = {
             id: "gambling",
             body:
               "SÁÁ offers counselling, treatment and support groups for people experiencing gambling-related harm. Loved ones can also seek counselling."
+          }
+        ]
+      },
+      resources: {
+        slug: "treatment-options",
+        title: "Treatment options",
+        eyebrow: "How the services work together",
+        intro:
+          "SÁÁ offers several services that can be combined according to each person’s situation. Some people start at Vogur, continue to Vík and then receive follow-up in Von. Others begin in outpatient care, use LOF or need residential support at Vin.",
+        ctaLabel: "Call 530 7600",
+        ctaHref: "tel:+3545307600",
+        treatmentResources: {
+          eyebrow: "Simple overview",
+          heading: "Five services that can form one treatment path.",
+          text:
+            "You do not need to know in advance which service is right for you. The first conversation and professional assessment help decide the next step.",
+          note:
+            "The services can connect in different ways. The order depends on health, substance use history, home situation, support and each person’s goals.",
+          items: [
+            {
+              id: "vogur",
+              icon: "hospital",
+              image: "/assets/images/hero-fyrstu-skrefin.png",
+              label: "Detox and first steps",
+              title: "Vogur",
+              duration: "Usually around 7-10 days, depending on assessment and circumstances.",
+              text:
+                "Vogur is a hospital where people receive detox, diagnosis, medical assessment and the first steps in treatment.",
+              points: [
+                "For people in withdrawal or under the influence.",
+                "A doctor and team assess physical and mental health.",
+                "The next step may be Vík, Von, LOF or other follow-up."
+              ]
+            },
+            {
+              id: "vik",
+              icon: "calendar",
+              image: "/assets/images/banner-sumarhatid.jpg",
+              label: "Residential treatment",
+              title: "Vík",
+              duration: "Usually 4 weeks / 28 days.",
+              text:
+                "Vík often follows Vogur once basic stability has been reached. It offers structured treatment with education, groups, project work and individual sessions.",
+              points: [
+                "Daily structure, movement, sleep, meals and support.",
+                "A trauma-informed and social approach.",
+                "Preparation for everyday life after residential treatment."
+              ]
+            },
+            {
+              id: "von",
+              icon: "users",
+              image: "/assets/images/banner-gongudeild-von.png",
+              label: "Outpatient and day treatment",
+              title: "Von",
+              duration: "Length varies, often day treatment and follow-up.",
+              text:
+                "Von is SÁÁ’s outpatient clinic at Efstaleiti. It provides counselling, assessment, day treatment, family services and follow-up.",
+              points: [
+                "Can be suitable without hospital admission.",
+                "Can come before or after Vogur and Vík.",
+                "Supports people as they continue everyday life."
+              ]
+            },
+            {
+              id: "vin",
+              icon: "home",
+              image: "/assets/images/hero-thjonusta-fjolskyldur.png",
+              label: "Transitional housing",
+              title: "Vin",
+              duration: "Longer-term support according to need.",
+              text:
+                "Vin is a residential support service and transitional home focused on stability, social rehabilitation and support in recovery.",
+              points: [
+                "For people who need a safer setting after treatment.",
+                "Supports daily life, relationships and responsibility.",
+                "Can connect with ongoing outpatient care and support."
+              ]
+            },
+            {
+              id: "lof",
+              icon: "pill",
+              image: "/assets/images/banner-spilafikn.png",
+              label: "Opioid addiction",
+              title: "LOF",
+              duration: "Long-term outpatient treatment with regular follow-up.",
+              text:
+                "LOF is medication treatment and outpatient care for opioid addiction. It is based on a comprehensive assessment, an individual treatment plan and follow-up by healthcare professionals.",
+              points: [
+                "Can begin at Vogur or in outpatient care.",
+                "Medication and follow-up are adjusted to each person’s needs.",
+                "Care may involve pharmacies, primary care and other services."
+              ]
+            }
+          ],
+          pathwayEyebrow: "How the path comes together",
+          pathwayTitle: "There is not one right route for everyone.",
+          pathway: [
+            {
+              icon: "heart",
+              title: "First contact",
+              text:
+                "You call, book a conversation or receive advice. The aim is to understand the situation and find the next step."
+            },
+            {
+              icon: "hospital",
+              title: "Assessment and detox if needed",
+              text:
+                "Some people need Vogur first. Others can start in Von or receive a specific assessment for LOF."
+            },
+            {
+              icon: "calendar",
+              title: "Treatment and practice",
+              text:
+                "Vík, Von, LOF and other services help people build new skills and stability."
+            },
+            {
+              icon: "home",
+              title: "Ongoing support",
+              text:
+                "Vin, outpatient care, groups and family services can support long-term recovery as needed."
+            }
+          ],
+          ctaTitle: "Not sure what applies?",
+          ctaText:
+            "That is normal. You do not have to choose the right service alone. Contact SÁÁ and get guidance."
+        },
+        sections: [
+          {
+            title: "Important",
+            body:
+              "This page is a simple overview. The final treatment plan is always assessed according to each person’s situation, health and circumstances."
           }
         ]
       },
@@ -1177,6 +1445,7 @@ export const siteContent = {
             links: [
               { label: "Potrzebuję pomocy", href: "/potrzebuje-pomocy" },
               { label: "Jeśli sytuacja jest pilna", href: "/pilna-pomoc" },
+              { label: "Możliwości leczenia", href: "/mozliwosci-leczenia" },
               { label: "Bliscy i rodzina", href: "/bliscy" }
             ]
           },
@@ -1184,6 +1453,7 @@ export const siteContent = {
             title: "Leczenie",
             links: [
               { label: "Leczenie i usługi", href: "/leczenie-i-uslugi" },
+              { label: "Możliwości leczenia", href: "/mozliwosci-leczenia" },
               { label: "Vogur", href: "/leczenie-i-uslugi#vogur" },
               { label: "Vík", href: "/leczenie-i-uslugi#vik" },
               { label: "Ambulatorium i leczenie dzienne", href: "/leczenie-i-uslugi#ambulatoryjne" }
@@ -1448,7 +1718,7 @@ export const siteContent = {
       mapLabel: "zobacz mapę",
       quickLinks: [
         { label: "Pierwsze kroki", href: "/potrzebuje-pomocy" },
-        { label: "Ścieżki leczenia", href: "/leczenie-i-uslugi" },
+        { label: "Możliwości leczenia", href: "/mozliwosci-leczenia" },
         { label: "O SÁÁ", href: "/o-saa" },
         { label: "Kontakt", href: "mailto:saa@saa.is" }
       ],
@@ -1542,6 +1812,138 @@ export const siteContent = {
             id: "hazard",
             body:
               "SÁÁ oferuje poradnictwo, leczenie i grupy wsparcia dla osób doświadczających problemów związanych z hazardem. Bliscy także mogą szukać poradnictwa."
+          }
+        ]
+      },
+      resources: {
+        slug: "mozliwosci-leczenia",
+        title: "Możliwości leczenia",
+        eyebrow: "Jak usługi działają razem",
+        intro:
+          "SÁÁ oferuje kilka form pomocy, które można łączyć zależnie od sytuacji danej osoby. Niektórzy zaczynają w Vogur, kontynuują w Vík i potem korzystają z Von. Inni zaczynają ambulatoryjnie, korzystają z LOF albo potrzebują wsparcia mieszkaniowego w Vin.",
+        ctaLabel: "Zadzwoń 530 7600",
+        ctaHref: "tel:+3545307600",
+        treatmentResources: {
+          eyebrow: "Prosty przegląd",
+          heading: "Pięć usług, które mogą stworzyć jedną ścieżkę leczenia.",
+          text:
+            "Nie musisz z góry wiedzieć, która usługa jest właściwa. Pierwsza rozmowa i profesjonalna ocena pomagają wybrać następny krok.",
+          note:
+            "Usługi mogą łączyć się na różne sposoby. Kolejność zależy od zdrowia, historii używania substancji, sytuacji domowej, wsparcia i celów każdej osoby.",
+          items: [
+            {
+              id: "vogur",
+              icon: "hospital",
+              image: "/assets/images/hero-fyrstu-skrefin.png",
+              label: "Detoks i pierwsze kroki",
+              title: "Vogur",
+              duration: "Zwykle około 7-10 dni, zależnie od oceny i sytuacji.",
+              text:
+                "Vogur to szpital, w którym osoby otrzymują detoks, diagnozę, ocenę medyczną i pierwsze kroki leczenia.",
+              points: [
+                "Dla osób w objawach odstawienia albo pod wpływem substancji.",
+                "Lekarz i zespół oceniają stan fizyczny i psychiczny.",
+                "Następnym krokiem może być Vík, Von, LOF albo inne dalsze wsparcie."
+              ]
+            },
+            {
+              id: "vik",
+              icon: "calendar",
+              image: "/assets/images/banner-sumarhatid.jpg",
+              label: "Leczenie stacjonarne",
+              title: "Vík",
+              duration: "Zwykle 4 tygodnie / 28 dni.",
+              text:
+                "Vík często następuje po Vogur, gdy osiągnięta jest podstawowa stabilizacja. Leczenie obejmuje edukację, grupy, pracę nad zadaniami i rozmowy indywidualne.",
+              points: [
+                "Plan dnia, ruch, sen, posiłki i wsparcie.",
+                "Podejście uwzględniające traumę i sytuację społeczną.",
+                "Przygotowanie do codziennego życia po leczeniu stacjonarnym."
+              ]
+            },
+            {
+              id: "von",
+              icon: "users",
+              image: "/assets/images/banner-gongudeild-von.png",
+              label: "Ambulatorium i leczenie dzienne",
+              title: "Von",
+              duration: "Długość jest różna, często leczenie dzienne i dalsze wsparcie.",
+              text:
+                "Von to poradnia ambulatoryjna SÁÁ w Efstaleiti. Oferuje rozmowy, ocenę, leczenie dzienne, usługi dla rodzin i dalsze wsparcie.",
+              points: [
+                "Może pasować bez przyjęcia do szpitala.",
+                "Może być przed albo po Vogur i Vík.",
+                "Wspiera osoby w powrocie do codziennego życia."
+              ]
+            },
+            {
+              id: "vin",
+              icon: "home",
+              image: "/assets/images/hero-thjonusta-fjolskyldur.png",
+              label: "Mieszkanie przejściowe",
+              title: "Vin",
+              duration: "Dłuższe wsparcie według potrzeb.",
+              text:
+                "Vin to wsparcie mieszkaniowe i dom przejściowy, gdzie nacisk jest na stabilność, rehabilitację społeczną i wsparcie w zdrowieniu.",
+              points: [
+                "Dla osób, które po leczeniu potrzebują bezpieczniejszego otoczenia.",
+                "Wspiera codzienne życie, relacje i odpowiedzialność.",
+                "Może łączyć się z dalszą opieką ambulatoryjną i wsparciem."
+              ]
+            },
+            {
+              id: "lof",
+              icon: "pill",
+              image: "/assets/images/banner-spilafikn.png",
+              label: "Uzależnienie od opioidów",
+              title: "LOF",
+              duration: "Długoterminowe leczenie ambulatoryjne z regularną kontrolą.",
+              text:
+                "LOF to leczenie lekami i opieka ambulatoryjna przy uzależnieniu od opioidów. Opiera się na pełnej ocenie, indywidualnym planie i kontroli przez personel medyczny.",
+              points: [
+                "Może rozpocząć się w Vogur albo ambulatoryjnie.",
+                "Leki i kontrola są dopasowywane do potrzeb osoby.",
+                "Opieka może obejmować współpracę z aptekami, podstawową opieką zdrowotną i innymi usługami."
+              ]
+            }
+          ],
+          pathwayEyebrow: "Jak układa się ścieżka",
+          pathwayTitle: "Nie ma jednej właściwej drogi dla wszystkich.",
+          pathway: [
+            {
+              icon: "heart",
+              title: "Pierwszy kontakt",
+              text:
+                "Dzwonisz, umawiasz rozmowę albo otrzymujesz poradę. Celem jest zrozumienie sytuacji i znalezienie następnego kroku."
+            },
+            {
+              icon: "hospital",
+              title: "Ocena i detoks, jeśli trzeba",
+              text:
+                "Niektóre osoby potrzebują najpierw Vogur. Inne mogą zacząć w Von albo otrzymać specjalistyczną ocenę dla LOF."
+            },
+            {
+              icon: "calendar",
+              title: "Leczenie i ćwiczenie nowych umiejętności",
+              text:
+                "Vík, Von, LOF i inne usługi pomagają budować nowe umiejętności i stabilność."
+            },
+            {
+              icon: "home",
+              title: "Dalsze wsparcie",
+              text:
+                "Vin, opieka ambulatoryjna, grupy i usługi rodzinne mogą wspierać długoterminowe zdrowienie według potrzeb."
+            }
+          ],
+          ctaTitle: "Nie wiesz, co pasuje?",
+          ctaText:
+            "To normalne. Nie musisz wybierać właściwej usługi samodzielnie. Skontaktuj się z SÁÁ i otrzymaj wskazówki."
+        },
+        sections: [
+          {
+            title: "Ważne",
+            body:
+              "Ta strona jest prostym przeglądem. Ostateczny plan leczenia jest zawsze oceniany według sytuacji, zdrowia i okoliczności danej osoby."
           }
         ]
       },
