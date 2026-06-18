@@ -6,9 +6,10 @@
 
 Vefurinn er Next.js App Router verkefni. Það þýðir að:
 
-- `app/layout.js` er ramminn utan um allar síður: haus, meginmál og fótur.
-- `app/page.js` birtir forsíðuna.
-- `app/[slug]/page.js` býr til undirsíður út frá gögnum í `data/site-content.js`.
+- `app/[lang]/layout.js` er ramminn utan um tungumálaútgáfur og setur rétt `<html lang>`.
+- `app/[lang]/page.js` birtir forsíðuna fyrir hvert tungumál.
+- `app/[lang]/[slug]/page.js` býr til undirsíður út frá gögnum í `data/site-content.js`.
+- `middleware.js` vísar rótinni `/` á sjálfgefið tungumál, `/is`.
 - `app/globals.css` geymir allt útlit í þessari fyrstu útgáfu.
 
 ## Gögnin eru viljandi einföld
@@ -26,9 +27,23 @@ data/site-content.js
 - forsíðukort,
 - þjónustukort,
 - fréttir,
-- allar undirsíður sem birtast í `/[slug]`.
+- allar undirsíður sem birtast undir `/is`, `/en` og `/pl`.
 
-Þetta er gert svo óvanur aðili geti breytt efni án þess að fikta í mörgum React-skrám.
+Þetta er gert svo óvanur aðili geti breytt efni án þess að fikta í mörgum React-skrám. Allt sýnilegt efni á að vera til á íslensku, ensku og pólsku.
+
+## Tungumál
+
+Vefurinn gerir ráð fyrir þremur tungumálum:
+
+```text
+/is  Íslenska
+/en  English
+/pl  Polski
+```
+
+Tungumál eru skilgreind í `languages` og `siteContent` í `data/site-content.js`.
+
+Þegar ný síða eða ný eining er bætt við þarf að bæta henni við öll þrjú tungumálin. Það er viljandi: þannig sést strax ef þýðingu vantar.
 
 ## Hvað gera components?
 
@@ -41,6 +56,19 @@ components/ButtonLink.js   Hnappur sem virkar fyrir innri og ytri tengla
 ```
 
 Ef þú ert bara að breyta texta byrjarðu ekki hér. Byrjaðu í `data/site-content.js`.
+
+## Valmynd og megamenu
+
+Aðalvalmyndin er vísvitandi stutt. Hún notar `megaMenu` í `data/site-content.js` og skiptir undirleiðum í dálka.
+
+Ef þú bætir við eða breytir valmynd:
+
+- haltu efstu flokkum fáum,
+- settu undirleiðir í `columns`,
+- hafðu sama skipulag á `is`, `en` og `pl`,
+- ekki setja texta beint inn í `SiteHeader.js`.
+
+Desktop megamenu opnast með `hover` og `focus-within`, þannig að það virkar bæði með mús og lyklaborði. Farsímaútgáfan notar HTML `details` hópa.
 
 ## Assets
 
@@ -69,6 +97,7 @@ er notað í kóða sem:
 - Texti er svartur eða dökkgrár fyrir læsileika.
 - Kort eru einföld, með litlum radius og skýrum bilum.
 - Forsíðan byrjar á hjálparleiðum, ekki fréttum.
+- Efnisröðun fylgir praktísku mynstri: lykilþjónusta, hagnýtar leiðir, stuðningsleiðir, traust og fréttir.
 - Mobile upplifun á að gera síma, fyrstu skref og hjálp strax mjög aðgengileg.
 
 ## Næstu tæknilegu skref
@@ -78,4 +107,4 @@ er notað í kóða sem:
 - leit,
 - formum fyrir beiðnir og vinnustaðavakt,
 - prófunum fyrir lykilflæði,
-- fleiri tungumálum fyrir lykilefni.
+- hreinsun og faglegri yfirferð á öllum þýðingum.

@@ -6,6 +6,16 @@
 
 AI má hjálpa við orðalag, flokkun, útdrætti, fyrirsagnir, yfirlit og fyrstu drög. AI á ekki að vera lokasamþykkt fyrir heilbrigðistengt efni, neyðarleiðbeiningar, persónuvernd, réttindi skjólstæðinga eða meðferðarviðmið.
 
+## Tungumál
+
+Allt sýnilegt efni á vefnum á að vera til á:
+
+- íslensku,
+- ensku,
+- pólsku.
+
+Þegar AI er notað til að þýða þarf að biðja um merkingarlega þýðingu, ekki orð-fyrir-orð þýðingu. Heilbrigðistengt efni og neyðarleiðbeiningar þarf að yfirfara sérstaklega á öllum tungumálum.
+
 ## Gott prompt fyrir nýja síðu
 
 ```text
@@ -15,6 +25,16 @@ Tónninn á að vera hlýr, skýr, fordómalaus og faglegur.
 Textinn á að svara: hvað er þetta, fyrir hverja er þetta, hvað get ég gert næst?
 Forðastu að gefa sjúkdómsgreiningu eða loforð um árangur.
 Endaðu á skýru næsta skrefi.
+```
+
+## Gott prompt fyrir þýðingu
+
+```text
+Þýddu eftirfarandi SÁÁ veftexta yfir á [ensku/pólsku].
+Haltu tóninum hlýjum, skýrum, fordómalausum og faglegum.
+Þýddu merkingu og næsta skref, ekki orð fyrir orð.
+Ekki bæta við nýjum læknisfræðilegum fullyrðingum.
+Merktu allt sem þyrfti faglega yfirferð.
 ```
 
 ## Gátlisti áður en efni fer í loftið

@@ -13,6 +13,8 @@ Install Command: npm install
 Output Directory: .next
 ```
 
+Rótarslóðin `/` vísar með `middleware.js` yfir á `/is`. Enska og pólska útgáfan eru undir `/en` og `/pl`.
+
 ## Fyrsta birting
 
 1. Tengja GitHub repo við Vercel.
@@ -35,6 +37,7 @@ NEXT_PUBLIC_SITE_URL
 Áður en vefurinn fer formlega í loftið þarf að staðfesta:
 
 - að allir tenglar vísi á rétta staði,
+- að íslenska, enska og pólska séu allar fullunnar,
 - að símanúmer og netföng séu rétt,
 - að myndaréttindi séu skýr,
 - að heilbrigðis- og neyðarupplýsingar hafi verið yfirfarnar faglega,
