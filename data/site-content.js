@@ -89,6 +89,13 @@ export const siteContent = {
         "Nýr Next.js grunnur fyrir SÁÁ-vef sem leggur áherslu á fyrstu skref, meðferð, aðstandendur og skýra leiðsögn."
     },
     brandLine: "Allt annað líf",
+    announcement: {
+      label: "Ráðstefna 2027",
+      title: "ISAM-SÁÁ 2027: From Science to Recovery",
+      meta: "9.-11. júní 2027 · Hilton Reykjavík Nordica",
+      linkLabel: "Skoða viðburð",
+      href: "https://events.bizzabo.com/SAAISAM27/home"
+    },
     labels: {
       phonePrefix: "s.",
       primaryCta: "Fyrstu skrefin",
@@ -777,6 +784,13 @@ export const siteContent = {
         "A Next.js foundation for the SÁÁ website focused on first steps, treatment, families and clear guidance."
     },
     brandLine: "A whole different life",
+    announcement: {
+      label: "Conference 2027",
+      title: "ISAM-SÁÁ 2027: From Science to Recovery",
+      meta: "June 9-11, 2027 · Hilton Reykjavík Nordica",
+      linkLabel: "View event",
+      href: "https://events.bizzabo.com/SAAISAM27/home"
+    },
     labels: {
       phonePrefix: "tel.",
       primaryCta: "First steps",
@@ -1465,6 +1479,13 @@ export const siteContent = {
         "Podstawa strony SÁÁ w Next.js, skupiona na pierwszych krokach, leczeniu, bliskich i jasnym prowadzeniu użytkownika."
     },
     brandLine: "Zupełnie inne życie",
+    announcement: {
+      label: "Konferencja 2027",
+      title: "ISAM-SÁÁ 2027: From Science to Recovery",
+      meta: "9-11 czerwca 2027 · Hilton Reykjavík Nordica",
+      linkLabel: "Zobacz wydarzenie",
+      href: "https://events.bizzabo.com/SAAISAM27/home"
+    },
     labels: {
       phonePrefix: "tel.",
       primaryCta: "Pierwsze kroki",

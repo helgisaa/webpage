@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, Phone } from "lucide-react";
+import { CalendarDays, Menu, Phone } from "lucide-react";
 import { contact, languages, localizedHref } from "@/data/site-content";
 import { ButtonLink } from "@/components/ButtonLink";
 
@@ -9,6 +9,19 @@ export function SiteHeader({ lang, content }) {
 
   return (
     <header className="site-header">
+      {content.announcement ? (
+        <a className="announcement-banner" href={content.announcement.href} target="_blank" rel="noreferrer">
+          <span className="announcement-banner__icon">
+            <CalendarDays size={20} aria-hidden="true" />
+          </span>
+          <span className="announcement-banner__copy">
+            <span>{content.announcement.label}</span>
+            <strong>{content.announcement.title}</strong>
+            <small>{content.announcement.meta}</small>
+          </span>
+          <span className="announcement-banner__cta">{content.announcement.linkLabel}</span>
+        </a>
+      ) : null}
       <div className="topbar">
         <span>{content.brandLine}</span>
         <a href={phoneHref}>
