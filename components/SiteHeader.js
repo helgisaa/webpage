@@ -9,6 +9,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 
 export function SiteHeader({ lang, content }) {
   const [isCompact, setIsCompact] = useState(false);
+  const headerRef = useRef(null);
   const isCompactRef = useRef(false);
 
   useEffect(() => {
@@ -27,8 +28,30 @@ export function SiteHeader({ lang, content }) {
     return () => window.removeEventListener("scroll", updateHeaderState);
   }, []);
 
+  useEffect(() => {
+    if (!headerRef.current) {
+      return undefined;
+    }
+
+    const updateHeaderHeight = () => {
+      document.documentElement.style.setProperty("--site-header-height", `${headerRef.current.offsetHeight}px`);
+    };
+
+    updateHeaderHeight();
+
+    const observer = new ResizeObserver(updateHeaderHeight);
+    observer.observe(headerRef.current);
+    window.addEventListener("resize", updateHeaderHeight);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", updateHeaderHeight);
+      document.documentElement.style.removeProperty("--site-header-height");
+    };
+  }, []);
+
   return (
-    <header className={`site-header${isCompact ? " site-header--compact" : ""}`}>
+    <header ref={headerRef} className={`site-header${isCompact ? " site-header--compact" : ""}`}>
       {content.announcement ? (
         <a className="announcement-banner" href={content.announcement.href} target="_blank" rel="noreferrer">
           <span className="announcement-banner__logo">
