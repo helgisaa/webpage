@@ -1,18 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, Menu, Phone } from "lucide-react";
-import { contact, languages, localizedHref } from "@/data/site-content";
+import { useEffect, useState } from "react";
+import { Menu } from "lucide-react";
+import { languages, localizedHref } from "@/data/site-content";
 import { ButtonLink } from "@/components/ButtonLink";
 
 export function SiteHeader({ lang, content }) {
-  const phoneHref = `tel:+354${contact.phone.replace(" ", "")}`;
+  const [isCompact, setIsCompact] = useState(false);
+
+  useEffect(() => {
+    const updateHeaderState = () => setIsCompact(window.scrollY > 24);
+
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+
+    return () => window.removeEventListener("scroll", updateHeaderState);
+  }, []);
 
   return (
-    <header className="site-header">
+    <header className={`site-header${isCompact ? " site-header--compact" : ""}`}>
       {content.announcement ? (
         <a className="announcement-banner" href={content.announcement.href} target="_blank" rel="noreferrer">
-          <span className="announcement-banner__icon">
-            <CalendarDays size={20} aria-hidden="true" />
+          <span className="announcement-banner__logo">
+            <Image src={content.announcement.image} alt="" width={220} height={83} priority />
           </span>
           <span className="announcement-banner__copy">
             <span>{content.announcement.label}</span>
@@ -22,15 +34,11 @@ export function SiteHeader({ lang, content }) {
           <span className="announcement-banner__cta">{content.announcement.linkLabel}</span>
         </a>
       ) : null}
-      <div className="topbar">
-        <span>{content.brandLine}</span>
-        <a href={phoneHref}>
-          {content.labels.phonePrefix} {contact.phone}
-        </a>
-      </div>
+
       <div className="header-inner">
         <Link className="brand" href={`/${lang}`} aria-label="SÁÁ">
-          <Image src="/assets/icons/logo.svg" alt="SÁÁ" width={118} height={48} priority />
+          <Image src="/assets/icons/logo.svg" alt="SÁÁ" width={118} height={78} priority />
+          <span className="brand-tagline">{content.brandLine}</span>
         </Link>
 
         <nav className="main-nav" aria-label={content.labels.mainNav}>
@@ -62,10 +70,6 @@ export function SiteHeader({ lang, content }) {
         </nav>
 
         <div className="header-actions">
-          <a className="phone-pill" href={phoneHref}>
-            <Phone size={18} aria-hidden="true" />
-            {contact.phone}
-          </a>
           <ButtonLink href={localizedHref(lang, content.home.primaryHref)}>{content.labels.primaryCta}</ButtonLink>
           <div className="language-switcher" aria-label={content.labels.languages}>
             {languages.map((language) => (

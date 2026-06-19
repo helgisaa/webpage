@@ -94,7 +94,8 @@ export const siteContent = {
       title: "ISAM-SÁÁ 2027: From Science to Recovery",
       meta: "9.-11. júní 2027 · Hilton Reykjavík Nordica",
       linkLabel: "Skoða viðburð",
-      href: "https://events.bizzabo.com/SAAISAM27/home"
+      href: "https://events.bizzabo.com/SAAISAM27/home",
+      image: "/assets/images/isam-saa-2027-logo.png"
     },
     labels: {
       phonePrefix: "s.",
@@ -218,7 +219,7 @@ export const siteContent = {
     ],
     home: {
       eyebrow: "Allt annað líf",
-      title: "SÁÁ hjálpar fólki að finna næstu skref.",
+      title: "hjálpar þér að taka fyrsta skrefið",
       intro:
         "Meðferð, ráðgjöf og stuðningur fyrir einstaklinga, fjölskyldur og samfélagið.",
       primaryCta: "Fyrstu skrefin",
@@ -789,7 +790,8 @@ export const siteContent = {
       title: "ISAM-SÁÁ 2027: From Science to Recovery",
       meta: "June 9-11, 2027 · Hilton Reykjavík Nordica",
       linkLabel: "View event",
-      href: "https://events.bizzabo.com/SAAISAM27/home"
+      href: "https://events.bizzabo.com/SAAISAM27/home",
+      image: "/assets/images/isam-saa-2027-logo.png"
     },
     labels: {
       phonePrefix: "tel.",
@@ -913,7 +915,7 @@ export const siteContent = {
     ],
     home: {
       eyebrow: "A whole different life",
-      title: "SÁÁ helps people find their next steps.",
+      title: "helps you take the first step",
       intro:
         "Treatment, counselling and support for individuals, families and the community.",
       primaryCta: "I need help",
@@ -1484,7 +1486,8 @@ export const siteContent = {
       title: "ISAM-SÁÁ 2027: From Science to Recovery",
       meta: "9-11 czerwca 2027 · Hilton Reykjavík Nordica",
       linkLabel: "Zobacz wydarzenie",
-      href: "https://events.bizzabo.com/SAAISAM27/home"
+      href: "https://events.bizzabo.com/SAAISAM27/home",
+      image: "/assets/images/isam-saa-2027-logo.png"
     },
     labels: {
       phonePrefix: "tel.",
@@ -1608,7 +1611,7 @@ export const siteContent = {
     ],
     home: {
       eyebrow: "Zupełnie inne życie",
-      title: "SÁÁ pomaga ludziom znaleźć następne kroki.",
+      title: "pomaga Ci zrobić pierwszy krok",
       intro:
         "Leczenie, poradnictwo i wsparcie dla osób indywidualnych, rodzin i społeczności.",
       primaryCta: "Potrzebuję pomocy",

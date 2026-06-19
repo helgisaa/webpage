@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { Red_Hat_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -32,6 +33,7 @@ export default async function LanguageLayout({ children, params }) {
         <SiteHeader lang={lang} content={content} />
         <main>{children}</main>
         <SiteFooter lang={lang} content={content} />
+        <Analytics />
       </body>
     </html>
   );

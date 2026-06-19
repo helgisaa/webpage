@@ -28,7 +28,17 @@ export function HomePage({ lang, content }) {
         <div className="hero-statement">
           <div className="hero-copy">
             <p className="eyebrow">{content.home.eyebrow}</p>
-            <h1>{content.home.title}</h1>
+            <h1 className="hero-title">
+              <Image
+                className="hero-title__logo"
+                src="/assets/icons/logo.svg"
+                alt="SÁÁ"
+                width={214}
+                height={142}
+                priority
+              />
+              <span>{content.home.title}</span>
+            </h1>
             <p>{content.home.intro}</p>
             <div className="hero-actions">
               <ButtonLink href={localizedHref(lang, content.home.primaryHref)}>
