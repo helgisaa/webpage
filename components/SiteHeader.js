@@ -2,16 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu } from "lucide-react";
 import { languages, localizedHref } from "@/data/site-content";
 import { ButtonLink } from "@/components/ButtonLink";
 
 export function SiteHeader({ lang, content }) {
   const [isCompact, setIsCompact] = useState(false);
+  const isCompactRef = useRef(false);
 
   useEffect(() => {
-    const updateHeaderState = () => setIsCompact(window.scrollY > 24);
+    const updateHeaderState = () => {
+      const shouldCompact = isCompactRef.current ? window.scrollY > 32 : window.scrollY > 96;
+
+      if (shouldCompact !== isCompactRef.current) {
+        isCompactRef.current = shouldCompact;
+        setIsCompact(shouldCompact);
+      }
+    };
 
     updateHeaderState();
     window.addEventListener("scroll", updateHeaderState, { passive: true });
