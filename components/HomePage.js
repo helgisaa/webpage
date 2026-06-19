@@ -1,10 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, HeartHandshake, ShieldCheck, Sparkles } from "lucide-react";
+import {
+  AlertTriangle,
+  ArrowRight,
+  HeartHandshake,
+  LifeBuoy,
+  MessageCircle,
+  PhoneCall,
+  ShieldCheck,
+  Sparkles
+} from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { localizedHref } from "@/data/site-content";
 
 const principleIcons = [ShieldCheck, HeartHandshake, Sparkles];
+const actionIcons = {
+  phone: PhoneCall,
+  message: MessageCircle,
+  steps: LifeBuoy,
+  urgent: AlertTriangle
+};
 
 export function HomePage({ lang, content }) {
   return (
@@ -27,9 +42,24 @@ export function HomePage({ lang, content }) {
           <aside className="hero-contact-card">
             <p>{content.home.contactCard.eyebrow}</p>
             <h2>{content.home.contactCard.title}</h2>
-            <Link href={localizedHref(lang, content.home.contactCard.href)}>
-              {content.home.contactCard.linkLabel}
-            </Link>
+            <span>{content.home.contactCard.intro}</span>
+            <div className="hero-contact-actions">
+              {content.home.contactCard.actions.map((action) => {
+                const Icon = actionIcons[action.icon] ?? MessageCircle;
+
+                return (
+                  <SmartLink href={action.href} lang={lang} key={action.title}>
+                    <span className="hero-contact-action__icon">
+                      <Icon aria-hidden="true" />
+                    </span>
+                    <span>
+                      <strong>{action.title}</strong>
+                      <small>{action.text}</small>
+                    </span>
+                  </SmartLink>
+                );
+              })}
+            </div>
           </aside>
         </div>
         <div className="hero-card-grid" aria-label={content.home.heroCardsLabel}>
@@ -64,9 +94,15 @@ export function HomePage({ lang, content }) {
 
       <section className="quick-panel" aria-label={content.home.quickActionsLabel}>
         {content.quickActions.map((action) => {
+          const Icon = actionIcons[action.icon] ?? LifeBuoy;
           const content = (
             <>
-              <span>{action.title}</span>
+              <div className="quick-card__top">
+                <span className="quick-card__icon">
+                  <Icon aria-hidden="true" />
+                </span>
+                <span className="quick-card__label">{action.title}</span>
+              </div>
               <p>{action.text}</p>
               <strong>{action.action}</strong>
             </>
@@ -158,4 +194,14 @@ export function HomePage({ lang, content }) {
       </section>
     </>
   );
+}
+
+function SmartLink({ children, href, lang }) {
+  const resolvedHref = localizedHref(lang, href);
+
+  if (href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:")) {
+    return <a href={resolvedHref}>{children}</a>;
+  }
+
+  return <Link href={resolvedHref}>{children}</Link>;
 }

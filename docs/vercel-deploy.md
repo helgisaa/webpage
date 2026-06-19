@@ -13,6 +13,8 @@ Install Command: npm install
 Output Directory: .next
 ```
 
+Verkefnið er stillt á Node.js `24.17.0` LTS með `.node-version` og `engines` í `package.json`. Vercel á því að byggja með Node 24 línunni.
+
 Rótarslóðin `/` vísar með `middleware.js` yfir á `/is`. Enska og pólska útgáfan eru undir `/en` og `/pl`.
 
 ## Fyrsta birting

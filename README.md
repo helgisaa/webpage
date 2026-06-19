@@ -4,12 +4,27 @@
 
 ## Keyrsla
 
+Verkefnið er stillt á Node.js `24.17.0` LTS. Sjá einnig `.node-version` og `engines` í `package.json`.
+
 ```bash
 npm install
 npm run dev
 ```
 
 Opnaðu síðan `http://localhost:3000`. Rótin `/` vísar sjálfkrafa á íslensku útgáfuna `/is`.
+
+Til að byggja production útgáfu:
+
+```bash
+npm run build
+```
+
+Á Windows getur PowerShell stundum lokað á `npm.ps1`. Þá má nota `npm.cmd` í staðinn:
+
+```powershell
+npm.cmd install
+npm.cmd run build
+```
 
 ## Mikilvægustu möppur
 

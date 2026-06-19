@@ -221,9 +221,30 @@ export const siteContent = {
       phoneCta: "Hringja í 530 7600",
       contactCard: {
         eyebrow: "Þarftu aðstoð?",
-        title: "Viðtöl, ráðgjöf og upplýsingar eru í síma 530 7600.",
+        title: "Veldu næsta skref.",
+        intro: "Þú þarft ekki að vita hvaða úrræði passar. Við hjálpum þér að finna leiðina.",
         linkLabel: "Sjá leiðir til að hafa samband",
-        href: "/eg-tharf-hjalp"
+        href: "/eg-tharf-hjalp",
+        actions: [
+          {
+            title: "Hringja",
+            text: "530 7600",
+            href: "tel:+3545307600",
+            icon: "phone"
+          },
+          {
+            title: "Fyrstu skrefin",
+            text: "Róleg leiðsögn",
+            href: "/eg-tharf-hjalp",
+            icon: "steps"
+          },
+          {
+            title: "Bráð staða",
+            text: "Hvað á að gera núna",
+            href: "/hjalp-strax",
+            icon: "urgent"
+          }
+        ]
       },
       heroCardsLabel: "Helstu leiðir",
       quickActionsLabel: "Hröð hjálp",
@@ -283,22 +304,25 @@ export const siteContent = {
     ],
     quickActions: [
       {
-        title: "Hringja í SÁÁ",
-        text: "Síminn er sýnilegasta næsta skrefið á öllum lykilsíðum.",
+        title: "Tala við einhvern",
+        text: "Ráðgjöf og upplýsingar í síma.",
         href: "tel:+3545307600",
-        action: contact.phone
+        action: contact.phone,
+        icon: "phone"
       },
       {
-        title: "Óska eftir þjónustu",
-        text: "Kynntu þér hvað gerist eftir að þú hefur samband.",
+        title: "Fyrstu skrefin",
+        text: "Stutt leið ef þú veist ekki hvar á að byrja.",
         href: "/eg-tharf-hjalp",
-        action: "Byrja hér"
+        action: "Byrja hér",
+        icon: "steps"
       },
       {
         title: "Ef staðan er bráð",
-        text: "Ef líf eða heilsa er í hættu á að hringja í neyðarlínu eða leita á bráðamóttöku.",
+        text: "Ef líf eða heilsa er í hættu.",
         href: "/hjalp-strax",
-        action: "Hjálp strax"
+        action: "Hjálp strax",
+        icon: "urgent"
       }
     ],
     serviceHighlights: [
@@ -521,7 +545,7 @@ export const siteContent = {
             {
               id: "vik",
               icon: "calendar",
-              image: "/assets/images/banner-sumarhatid.jpg",
+              image: "/assets/images/hero-fraedsla.png",
               label: "Inniliggjandi meðferð",
               title: "Vík",
               duration: "Að jafnaði 4 vikur / 28 dagar.",
@@ -566,7 +590,7 @@ export const siteContent = {
             {
               id: "lof",
               icon: "pill",
-              image: "/assets/images/banner-spilafikn.png",
+              image: "/assets/images/banner-gongudeild-von.png",
               label: "Ópíóíðafíkn",
               title: "LOF",
               duration: "Langtíma göngudeildarmeðferð með reglulegri eftirfylgd.",
@@ -885,9 +909,30 @@ export const siteContent = {
       phoneCta: "Call 530 7600",
       contactCard: {
         eyebrow: "Do you need support?",
-        title: "Appointments, counselling and information are available by phone at 530 7600.",
+        title: "Choose the next step.",
+        intro: "You do not need to know which service fits. We can help you find the right path.",
         linkLabel: "See ways to get in touch",
-        href: "/need-help"
+        href: "/need-help",
+        actions: [
+          {
+            title: "Call",
+            text: "530 7600",
+            href: "tel:+3545307600",
+            icon: "phone"
+          },
+          {
+            title: "First steps",
+            text: "Calm guidance",
+            href: "/need-help",
+            icon: "steps"
+          },
+          {
+            title: "Urgent situation",
+            text: "What to do now",
+            href: "/urgent-help",
+            icon: "urgent"
+          }
+        ]
       },
       heroCardsLabel: "Main pathways",
       quickActionsLabel: "Quick help",
@@ -947,22 +992,25 @@ export const siteContent = {
     ],
     quickActions: [
       {
-        title: "Call SÁÁ",
-        text: "The phone number is the most visible next step on all key pages.",
+        title: "Talk to someone",
+        text: "Counselling and information by phone.",
         href: "tel:+3545307600",
-        action: contact.phone
+        action: contact.phone,
+        icon: "phone"
       },
       {
-        title: "Ask for support",
-        text: "Learn what happens after you contact SÁÁ.",
+        title: "First steps",
+        text: "A short path if you do not know where to begin.",
         href: "/need-help",
-        action: "Start here"
+        action: "Start here",
+        icon: "steps"
       },
       {
         title: "If the situation is urgent",
-        text: "If life or health is at risk, call emergency services or go to an emergency department.",
+        text: "If life or health is at risk.",
         href: "/urgent-help",
-        action: "Urgent help"
+        action: "Urgent help",
+        icon: "urgent"
       }
     ],
     serviceHighlights: [
@@ -1185,7 +1233,7 @@ export const siteContent = {
             {
               id: "vik",
               icon: "calendar",
-              image: "/assets/images/banner-sumarhatid.jpg",
+              image: "/assets/images/hero-fraedsla.png",
               label: "Residential treatment",
               title: "Vík",
               duration: "Usually 4 weeks / 28 days.",
@@ -1230,7 +1278,7 @@ export const siteContent = {
             {
               id: "lof",
               icon: "pill",
-              image: "/assets/images/banner-spilafikn.png",
+              image: "/assets/images/banner-gongudeild-von.png",
               label: "Opioid addiction",
               title: "LOF",
               duration: "Long-term outpatient treatment with regular follow-up.",
@@ -1549,9 +1597,30 @@ export const siteContent = {
       phoneCta: "Zadzwoń 530 7600",
       contactCard: {
         eyebrow: "Potrzebujesz wsparcia?",
-        title: "Rozmowy, poradnictwo i informacje są dostępne pod numerem 530 7600.",
+        title: "Wybierz następny krok.",
+        intro: "Nie musisz wiedzieć, która usługa pasuje. Pomożemy Ci znaleźć właściwą drogę.",
         linkLabel: "Zobacz sposoby kontaktu",
-        href: "/potrzebuje-pomocy"
+        href: "/potrzebuje-pomocy",
+        actions: [
+          {
+            title: "Zadzwoń",
+            text: "530 7600",
+            href: "tel:+3545307600",
+            icon: "phone"
+          },
+          {
+            title: "Pierwsze kroki",
+            text: "Spokojne wskazówki",
+            href: "/potrzebuje-pomocy",
+            icon: "steps"
+          },
+          {
+            title: "Pilna sytuacja",
+            text: "Co zrobić teraz",
+            href: "/pilna-pomoc",
+            icon: "urgent"
+          }
+        ]
       },
       heroCardsLabel: "Główne ścieżki",
       quickActionsLabel: "Szybka pomoc",
@@ -1611,22 +1680,25 @@ export const siteContent = {
     ],
     quickActions: [
       {
-        title: "Zadzwoń do SÁÁ",
-        text: "Numer telefonu jest najważniejszym następnym krokiem na kluczowych stronach.",
+        title: "Porozmawiaj z kimś",
+        text: "Poradnictwo i informacje telefonicznie.",
         href: "tel:+3545307600",
-        action: contact.phone
+        action: contact.phone,
+        icon: "phone"
       },
       {
-        title: "Poproś o wsparcie",
-        text: "Dowiedz się, co dzieje się po kontakcie z SÁÁ.",
+        title: "Pierwsze kroki",
+        text: "Krótka ścieżka, jeśli nie wiesz, od czego zacząć.",
         href: "/potrzebuje-pomocy",
-        action: "Zacznij tutaj"
+        action: "Zacznij tutaj",
+        icon: "steps"
       },
       {
         title: "Gdy sytuacja jest pilna",
-        text: "Jeśli życie lub zdrowie jest zagrożone, zadzwoń po pomoc ratunkową albo udaj się na ostry dyżur.",
+        text: "Jeśli życie lub zdrowie jest zagrożone.",
         href: "/pilna-pomoc",
-        action: "Pilna pomoc"
+        action: "Pilna pomoc",
+        icon: "urgent"
       }
     ],
     serviceHighlights: [
@@ -1849,7 +1921,7 @@ export const siteContent = {
             {
               id: "vik",
               icon: "calendar",
-              image: "/assets/images/banner-sumarhatid.jpg",
+              image: "/assets/images/hero-fraedsla.png",
               label: "Leczenie stacjonarne",
               title: "Vík",
               duration: "Zwykle 4 tygodnie / 28 dni.",
@@ -1894,7 +1966,7 @@ export const siteContent = {
             {
               id: "lof",
               icon: "pill",
-              image: "/assets/images/banner-spilafikn.png",
+              image: "/assets/images/banner-gongudeild-von.png",
               label: "Uzależnienie od opioidów",
               title: "LOF",
               duration: "Długoterminowe leczenie ambulatoryjne z regularną kontrolą.",

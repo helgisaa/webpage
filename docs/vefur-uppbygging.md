@@ -110,9 +110,10 @@ er notað í kóða sem:
 ## Hönnunarreglur í þessari útgáfu
 
 - Appelsínurauði SÁÁ-liturinn `#ff3b00` er notaður fyrir aðgerðir og áherslur.
-- Texti er svartur eða dökkgrár fyrir læsileika.
+- Texti notar hlýjan dökkan lit, ekki hreinan svartan, svo stórar fyrirsagnir verði mannlegri og mildari.
 - Kort eru einföld, með litlum radius og skýrum bilum.
-- Forsíðan byrjar á hjálparleiðum, ekki fréttum.
+- Forsíðan byrjar á hjálparleiðum, ekki fréttum. Hero-svæðið á að taka vel á móti fólki sem er óvisst, ekki líta út eins og innanhússkynning.
+- Hjálparkassinn á forsíðu notar icon og stuttar aðgerðir: hringja, fyrstu skref og bráða stöðu.
 - Efnisröðun fylgir praktísku mynstri: lykilþjónusta, hagnýtar leiðir, stuðningsleiðir, traust og fréttir.
 - Mobile upplifun á að gera síma, fyrstu skref og hjálp strax mjög aðgengileg.
 
