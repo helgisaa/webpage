@@ -69,7 +69,6 @@ export function SiteHeader({ lang, content }) {
       <div className="header-inner">
         <Link className="brand" href={`/${lang}`} aria-label="SÁÁ">
           <Image src="/assets/icons/logo.svg" alt="SÁÁ" width={118} height={78} priority />
-          <span className="brand-tagline">{content.brandLine}</span>
         </Link>
 
         <nav className="main-nav" aria-label={content.labels.mainNav}>
