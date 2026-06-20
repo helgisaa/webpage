@@ -145,6 +145,7 @@ Einfaldasta reglan:
 - `main` á alltaf að vera build-hæfur.
 - Litlar breytingar mega fara beint á `main`.
 - Stærri breytingar ættu að fara í sér branch og Vercel Preview.
+- `preview` branch má nota til að prófa Vercel Preview án þess að snerta production.
 - Alltaf keyra `npm.cmd run build` áður en ýtt er á GitHub.
 
 ## Checklisti áður en ýtt er á GitHub
