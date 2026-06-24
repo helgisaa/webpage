@@ -2,22 +2,32 @@
 
 Þetta skjal er fyrir fólk sem er ekki vant vefforritun en þarf að geta ratað um verkefnið.
 
+## Fyrst: hvað er hvað?
+
+Repo-ið er viljandi einfalt ef það er lesið svona:
+
+- `web/data/site-content.js` er contentið sem vefurinn birtir
+- `web/app/`, `web/components/` og `web/public/assets/` eru vefurinn sjálfur
+- `docs/` er skýringalagið og þar undir eru bæði tækniskjöl og reference-gögn
+
+Ef þú ert að leita að texta, síðum eða valmyndum, byrjaðu ekki í tækniskrám. Byrjaðu í `web/data/site-content.js`.
+
 ## Stóra myndin
 
 Vefurinn er Next.js App Router verkefni. Það þýðir að:
 
-- `app/[lang]/layout.js` er ramminn utan um tungumálaútgáfur og setur rétt `<html lang>`.
-- `app/[lang]/page.js` birtir forsíðuna fyrir hvert tungumál.
-- `app/[lang]/[slug]/page.js` býr til undirsíður út frá gögnum í `data/site-content.js`.
-- `middleware.js` vísar rótinni `/` á sjálfgefið tungumál, `/is`.
-- `app/globals.css` geymir allt útlit í þessari fyrstu útgáfu.
+- `web/app/[lang]/layout.js` er ramminn utan um tungumálaútgáfur og setur rétt `<html lang>`.
+- `web/app/[lang]/page.js` birtir forsíðuna fyrir hvert tungumál.
+- `web/app/[lang]/[slug]/page.js` býr til undirsíður út frá gögnum í `web/data/site-content.js`.
+- `web/middleware.js` vísar rótinni `/` á sjálfgefið tungumál, `/is`.
+- `web/app/globals.css` geymir allt útlit í þessari fyrstu útgáfu.
 
 ## Gögnin eru viljandi einföld
 
 Flest efni er í:
 
 ```text
-data/site-content.js
+web/data/site-content.js
 ```
 
 Þessi skrá er einföld miðlæg content-skrá. Hún geymir:
@@ -41,25 +51,25 @@ Vefurinn gerir ráð fyrir þremur tungumálum:
 /pl  Polski
 ```
 
-Tungumál eru skilgreind í `languages` og `siteContent` í `data/site-content.js`.
+Tungumál eru skilgreind í `languages` og `siteContent` í `web/data/site-content.js`.
 
 Þegar ný síða eða ný eining er bætt við þarf að bæta henni við öll þrjú tungumálin. Það er viljandi: þannig sést strax ef þýðingu vantar.
 
 ## Hvað gera components?
 
 ```text
-components/SiteHeader.js   Haus, logo, valmynd og hraðhnappar
-components/SiteFooter.js   Fótur með sambandi, flýtileiðum og styrktarupplýsingum
-components/HomePage.js     Forsíðan og allar hennar einingar
-components/ContentPage.js  Sameiginlegt útlit fyrir undirsíður
-components/ButtonLink.js   Hnappur sem virkar fyrir innri og ytri tengla
+web/components/SiteHeader.js   Haus, logo, valmynd og hraðhnappar
+web/components/SiteFooter.js   Fótur með sambandi, flýtileiðum og styrktarupplýsingum
+web/components/HomePage.js     Forsíðan og allar hennar einingar
+web/components/ContentPage.js  Sameiginlegt útlit fyrir undirsíður
+web/components/ButtonLink.js   Hnappur sem virkar fyrir innri og ytri tengla
 ```
 
-Ef þú ert bara að breyta texta byrjarðu ekki hér. Byrjaðu í `data/site-content.js`.
+Ef þú ert bara að breyta texta byrjarðu ekki hér. Byrjaðu í `web/data/site-content.js`.
 
 ## Meðferðarúrræðin
 
-Síðan `Meðferðarúrræðin` er venjuleg undirsíða í `data/site-content.js`, en hún notar aukahlutann `treatmentResources`.
+Síðan `Meðferðarúrræðin` er venjuleg undirsíða í `web/data/site-content.js`, en hún notar aukahlutann `treatmentResources`.
 
 Þar eru fimm úrræði sett fram sem einföld kort:
 
@@ -69,13 +79,13 @@ Síðan `Meðferðarúrræðin` er venjuleg undirsíða í `data/site-content.js
 - `Vin` fyrir búsetuúrræði og félagslega endurhæfingu.
 - `LOF` fyrir lyfjameðferð og göngudeildarmeðferð við ópíóíðafíkn.
 
-Hvert kort hefur `label`, `title`, `duration`, `text`, `points`, `icon` og `image`. Icon heitin eru skilgreind í `components/ContentPage.js`. Myndirnar koma úr `public/assets/images/`.
+Hvert kort hefur `label`, `title`, `duration`, `text`, `points`, `icon` og `image`. Icon heitin eru skilgreind í `web/components/ContentPage.js`. Myndirnar koma úr `web/public/assets/images/`.
 
 Neðst á síðunni er `pathway`, sem útskýrir í einföldum skrefum að fólk þarf ekki að velja rétta úrræðið sjálft. Faglegt mat og fyrsta samtal hjálpa til við að raða úrræðunum saman.
 
 ## Valmynd og megamenu
 
-Aðalvalmyndin er vísvitandi stutt. Hún notar `megaMenu` í `data/site-content.js` og skiptir undirleiðum í dálka.
+Aðalvalmyndin er vísvitandi stutt. Hún notar `megaMenu` í `web/data/site-content.js` og skiptir undirleiðum í dálka.
 
 Ef þú bætir við eða breytir valmynd:
 
@@ -91,14 +101,14 @@ Desktop megamenu opnast með `hover` og `focus-within`, þannig að það virkar
 Myndir og tákn eru í:
 
 ```text
-public/assets/images/
-public/assets/icons/
+web/public/assets/images/
+web/public/assets/icons/
 ```
 
-Þetta er afritað úr `docs/saa-design-audit/assets/`. Next.js birtir skrár í `public/` beint frá rót vefsins. Dæmi:
+Þetta er afritað úr `docs/reference/saa-design-audit/assets/`. Next.js birtir skrár í `web/public/` beint frá rót vefsins. Dæmi:
 
 ```text
-public/assets/images/banner-gongudeild-von.png
+web/public/assets/images/banner-gongudeild-von.png
 ```
 
 er notað í kóða sem:

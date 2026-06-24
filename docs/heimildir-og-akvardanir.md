@@ -4,11 +4,11 @@
 
 ## Lesið í repo-inu
 
-- `saa_greining_nyr_vefur.md`
-- `docs/saa-design-audit/README.md`
-- `docs/saa-design-audit/source/theme.css`
-- `docs/saa-design-audit/assets/fonts/red-hat-display.css`
-- myndir og tákn úr `docs/saa-design-audit/assets/`
+- `docs/reference/saa_greining_nyr_vefur.md`
+- `docs/reference/saa-design-audit/README.md`
+- `docs/reference/saa-design-audit/source/theme.css`
+- `docs/reference/saa-design-audit/assets/fonts/red-hat-display.css`
+- myndir og tákn úr `docs/reference/saa-design-audit/assets/`
 
 ## Skoðað á saa.is
 
@@ -51,7 +51,7 @@ Einnig voru notuð tvö viðmið við þessa útgáfu:
 
 ## Af hverju miðlæg content-skrá?
 
-Efni er sett í `data/site-content.js` til að auðvelda:
+Efni er sett í `web/data/site-content.js` til að auðvelda:
 
 - breytingar með AI-aðstoð,
 - yfirferð fyrir fólk sem er ekki vant React,

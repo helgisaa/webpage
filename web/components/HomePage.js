@@ -75,7 +75,13 @@ export function HomePage({ lang, content }) {
         <div className="hero-card-grid" aria-label={content.home.heroCardsLabel}>
           {content.heroCards.map((card) => (
             <Link className="image-card" href={localizedHref(lang, card.href)} key={card.title}>
-              <Image src={card.image} alt="" fill sizes="(max-width: 900px) 33vw, 100vw" priority />
+              <Image
+                src={card.image}
+                alt={card.title}
+                fill
+                sizes="(max-width: 900px) 33vw, 100vw"
+                priority
+              />
               <span className="image-card__content">
                 <span>{card.eyebrow}</span>
                 <strong>{card.title}</strong>
@@ -154,7 +160,7 @@ export function HomePage({ lang, content }) {
         <div className="campaign-grid">
           {content.campaigns.map((campaign) => (
             <Link className="campaign-card" href={localizedHref(lang, campaign.href)} key={campaign.title}>
-              <Image src={campaign.image} alt="" width={662} height={425} />
+              <Image src={campaign.image} alt={campaign.title} width={662} height={425} />
               <div>
                 <h3>{campaign.title}</h3>
                 <p>{campaign.text}</p>
@@ -192,7 +198,7 @@ export function HomePage({ lang, content }) {
         <div className="news-grid">
           {content.news.map((item) => (
             <a className="news-card" href={item.href} key={item.title}>
-              <Image src={item.image} alt="" width={760} height={420} />
+              <Image src={item.image} alt={item.title} width={760} height={420} />
               <div>
                 <span>{item.date}</span>
                 <h3>{item.title}</h3>

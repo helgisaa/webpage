@@ -13,6 +13,16 @@ const resourceIcons = {
   heart: HeartPulse
 };
 
+const accentClassByIcon = {
+  hospital: "accent-brand",
+  calendar: "accent-yellow",
+  users: "accent-pink",
+  home: "accent-purple",
+  pill: "accent-green",
+  network: "accent-yellow",
+  heart: "accent-brand"
+};
+
 export function ContentPage({ lang, content, page }) {
   return (
     <>
@@ -31,7 +41,7 @@ export function ContentPage({ lang, content, page }) {
 
       <section className="section content-sections">
         {page.sections.map((section) => (
-          <article id={section.id} className="content-block" key={section.title}>
+          <article id={section.id} className="content-block accent-brand" key={section.title}>
             <div>
               <span>{section.id ? `#${section.id}` : content.labels.sectionTag}</span>
               <h2>{section.title}</h2>
@@ -63,11 +73,12 @@ function TreatmentResources({ lang, page }) {
       <div className="resource-card-grid">
         {page.treatmentResources.items.map((item) => {
           const Icon = resourceIcons[item.icon] ?? HeartPulse;
+          const accentClass = accentClassByIcon[item.icon] ?? "accent-brand";
 
           return (
-            <article className="resource-card" id={item.id} key={item.id}>
+            <article className={`resource-card ${accentClass}`} id={item.id} key={item.id}>
               <div className="resource-card__media">
-                <Image src={item.image} alt="" width={662} height={425} />
+                <Image src={item.image} alt={item.title} width={662} height={425} />
                 <span>
                   <Icon aria-hidden="true" />
                 </span>
@@ -94,9 +105,10 @@ function TreatmentResources({ lang, page }) {
         <div>
           {page.treatmentResources.pathway.map((step, index) => {
             const Icon = resourceIcons[step.icon] ?? HeartPulse;
+            const accentClass = accentClassByIcon[step.icon] ?? "accent-brand";
 
             return (
-              <article key={step.title}>
+              <article className={accentClass} key={step.title}>
                 <span>{index + 1}</span>
                 <Icon aria-hidden="true" />
                 <h3>{step.title}</h3>

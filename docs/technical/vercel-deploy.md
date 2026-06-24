@@ -7,22 +7,24 @@ Vefurinn er settur upp sem venjulegt Next.js verkefni og á að virka beint á V
 Á Vercel má nota sjálfgefnar stillingar:
 
 ```text
+Root Directory: web
 Framework Preset: Next.js
 Build Command: npm run build
 Install Command: npm install
 Output Directory: .next
 ```
 
-Verkefnið er stillt á Node.js `24.17.0` LTS með `.node-version` og `engines` í `package.json`. Vercel á því að byggja með Node 24 línunni.
+Verkefnið er stillt á Node.js `24.17.0` LTS með `web/.node-version` og `engines` í `web/package.json`. Vercel á því að byggja með Node 24 línunni.
 
-Rótarslóðin `/` vísar með `middleware.js` yfir á `/is`. Enska og pólska útgáfan eru undir `/en` og `/pl`.
+Rótarslóðin `/` vísar með `web/middleware.js` yfir á `/is`. Enska og pólska útgáfan eru undir `/en` og `/pl`.
 
 ## Fyrsta birting
 
 1. Tengja GitHub repo við Vercel.
 2. Velja þetta verkefni.
-3. Leyfa Vercel að finna Next.js sjálfkrafa.
-4. Keyra fyrstu deployment.
+3. Setja Root Directory á `web`.
+4. Leyfa Vercel að finna Next.js sjálfkrafa.
+5. Keyra fyrstu deployment.
 
 ## Preview og athugasemdir
 
@@ -30,7 +32,7 @@ Fyrir AI-studda hönnunar- og efnisvinnu er best að nota Vercel Preview Deploym
 
 Vercel Comments má nota til að setja athugasemdir beint á hluta síðunnar. Það hentar vel fyrir fólk sem vill benda á vandamál í útliti eða texta án þess að þurfa að þekkja kóðann.
 
-Skráð vinnulag er í `docs/throunarumhverfi-fyrir-ai-vinnu.md`.
+Skráð vinnulag er í `docs/technical/throunarumhverfi-fyrir-ai-vinnu.md`.
 
 ## Environment variables
 

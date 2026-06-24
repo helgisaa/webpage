@@ -203,6 +203,7 @@ export const siteContent = {
             title: "Samtökin",
             links: [
               { label: "Um SÁÁ", href: "/um-saa" },
+               { label: "Saga SÁÁ", href: "/saga-saa" },
               { label: "Hlutverk og gildi", href: "/um-saa" },
               { label: "Gagnsæi", href: "/um-saa" }
             ]
@@ -752,6 +753,72 @@ export const siteContent = {
             title: "Skýr uppbygging",
             body:
               "Nýi vefurinn er byggður þannig að einfalt sé að breyta textum og slóðum í einni skýrri content-skrá án þess að þurfa að fara djúpt í React."
+          }
+        ]
+      },
+      history: {
+        slug: "saga-saa",
+        title: "Saga SÁÁ",
+        eyebrow: "Frá grasrótarframtaki að landsþjónustu",
+        intro:
+          "Saga SÁÁ er saga samtaka sem urðu til árið 1977 til að bæta aðgengi að meðferð, fræðslu og skilningi á fíknivanda á Íslandi. Hér er einföld tímalína sem dregur saman helstu áfanga út frá aðgengilegum heimildum.",
+        ctaLabel: "Sjá Um SÁÁ",
+        ctaHref: "/um-saa",
+        sections: [
+          {
+            title: "1. október 1977 · SÁÁ stofnað",
+            body:
+              "Samtök áhugafólks um áfengis- og vímuefnavandann voru stofnuð í Háskólabíói. Markmiðið var að byggja upp meðferð, fræðslu og öflugri baráttu gegn vanþekkingu og fordómum í kringum fíknivanda á Íslandi."
+          },
+          {
+            title: "Nóvember 1977 · Fræðslu- og leiðbeiningarstöð opnuð",
+            body:
+              "Skömmu eftir stofnun var opnuð fræðslu- og leiðbeiningarstöð í Lágmúla í Reykjavík. Sú starfsemi þróaðist síðar í göngudeild SÁÁ og varð mikilvægur inngangur að ráðgjöf og stuðningi."
+          },
+          {
+            title: "1977–1978 · Fyrsta afeitrunarstarfsemi hefst",
+            body:
+              "Afeitrunarstarf hófst mjög fljótt eftir stofnun. Fyrst í Reykjadal, síðan í Langholtsskóla yfir sumartíma og loks að Silungapolli áður en Vogur opnaði."
+          },
+          {
+            title: "14. ágúst 1978 · Eftirmeðferðarheimilið að Sogni opnað",
+            body:
+              "Með opnun Sogns bætti SÁÁ við skipulagðri eftirmeðferð og styrkti þannig heildstæða meðferðarleið eftir fyrstu skref."
+          },
+          {
+            title: "Nóvember 1980 · Eftirmeðferðarstöð að Staðarfelli opnuð",
+            body:
+              "Staðarfell varð hluti af uppbyggingu inniliggjandi eftirmeðferðar SÁÁ á tímabili þegar þjónustan var enn að taka á sig form."
+          },
+          {
+            title: "Desember 1983 · Sjúkrahúsið Vogur opnar",
+            body:
+              "Með opnun Vogs fékk afeitrun, greining og læknisfræðilegt mat varanlegri og sérhæfðari umgjörð. Vogur varð einn af lykilstoðum starfsemi SÁÁ."
+          },
+          {
+            title: "1991 · Meðferð flyst frá Sogni að Vík",
+            body:
+              "Inniliggjandi eftirmeðferð sem áður var á Sogni fluttist að Vík á Kjalarnesi þar sem skipulögð meðferð og endurhæfing þróuðust áfram."
+          },
+          {
+            title: "2006 · VON opnar í Efstaleiti 7",
+            body:
+              "Göngudeildarstarfsemi fluttist í nýtt húsnæði í Efstaleiti 7 í október 2006. Þar styrktist umgjörð fyrir viðtöl, dagmeðferð, fjölskylduþjónustu og eftirfylgd."
+          },
+          {
+            title: "1. mars 2018 · Inniliggjandi eftirmeðferð sameinuð á Vík",
+            body:
+              "Þegar inniliggjandi eftirmeðferð var sameinuð á nýuppbyggðri Vík varð meðferðarleiðin skýrari og samþættari."
+          },
+          {
+            title: "Í dag · Breið og fjölþætt þjónusta",
+            body:
+              "Í dag byggir SÁÁ á blöndu af sjúkrahúsþjónustu, göngudeild, inniliggjandi meðferð, búsetuúrræðum, þjónustu við aðstandendur, fræðslu og rannsóknum. Kjarni starfseminnar er enn að berjast gegn fordómum og bæta aðgengi að faglegri hjálp."
+          },
+          {
+            title: "Um heimildir",
+            body:
+              "Tímalínan hér er samantekt byggð á aðgengilegum opinberum upplýsingum um tilgang og skipulag SÁÁ, ásamt samhljóða sögulýsingu sem hefur verið birt opinberlega. Áður en efnið verður formleg sögusíða í lofti er eðlilegt að það fari í yfirferð hjá SÁÁ."
           }
         ]
       },

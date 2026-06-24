@@ -39,6 +39,7 @@ Við viljum að fólk geti:
 Opna repo-ið í VS Code og keyra:
 
 ```powershell
+cd web
 npm.cmd install
 npm.cmd run dev
 ```
@@ -109,7 +110,7 @@ Minnka þetta logo þegar scrollað er.
 
 ### Efnisritstjóri
 
-- Breytir eða biður AI um breytingar á texta í `data/site-content.js`.
+- Breytir eða biður AI um breytingar á texta í `web/data/site-content.js`.
 - Passar að íslenska, enska og pólska séu uppfærðar saman.
 - Skoðar live preview.
 
@@ -123,20 +124,20 @@ Minnka þetta logo þegar scrollað er.
 
 - Les comments og screenshot.
 - Gerir breytingar í repo.
-- Keyrir `npm.cmd run build`.
+- Keyrir `npm.cmd run build` inni í `web/`.
 - Commit-ar og push-ar þegar breytingin er tilbúin.
 
 ## Hvar á að breyta hverju?
 
 ```text
-data/site-content.js      Textar, valmyndir, cards, síður og tungumál
-components/               Uppbygging hluta, t.d. header, footer, forsíða
-app/globals.css           Útlit, litir, bil, stærðir og responsive hegðun
-public/assets/            Myndir, logo og icon
-docs/                     Leiðbeiningar og ákvarðanir
+web/data/site-content.js      Textar, valmyndir, cards, síður og tungumál
+web/components/               Uppbygging hluta, t.d. header, footer, forsíða
+web/app/globals.css           Útlit, litir, bil, stærðir og responsive hegðun
+web/public/assets/            Myndir, logo og icon
+docs/                         Leiðbeiningar og ákvarðanir
 ```
 
-Fyrir óforritara er best að byrja á `data/site-content.js`. Ef breytingin snýst um útlit á AI frekar að breyta `components/` og `app/globals.css`.
+Fyrir óforritara er best að byrja á `web/data/site-content.js`. Ef breytingin snýst um útlit á AI frekar að breyta `web/components/` og `web/app/globals.css`.
 
 ## Branch og deploy regla
 
@@ -146,7 +147,7 @@ Einfaldasta reglan:
 - Litlar breytingar mega fara beint á `main`.
 - Stærri breytingar ættu að fara í sér branch og Vercel Preview.
 - `preview` branch má nota til að prófa Vercel Preview án þess að snerta production.
-- Alltaf keyra `npm.cmd run build` áður en ýtt er á GitHub.
+- Alltaf keyra `npm.cmd run build` inni í `web/` áður en ýtt er á GitHub.
 
 ## Checklisti áður en ýtt er á GitHub
 
@@ -155,7 +156,7 @@ Einfaldasta reglan:
 [ ] Desktop skoðað
 [ ] Mobile skoðað
 [ ] Íslenska, enska og pólska yfirfarin ef texti breyttist
-[ ] npm.cmd run build keyrir án villna
+[ ] npm.cmd run build keyrir án villna inni í web/
 [ ] Commit message lýsir breytingunni
 ```
 
