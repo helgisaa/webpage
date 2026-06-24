@@ -3,12 +3,16 @@ import Link from "next/link";
 import {
   AlertTriangle,
   ArrowRight,
+  House,
   HeartHandshake,
+  KeyRound,
   LifeBuoy,
   MessageCircle,
   PhoneCall,
   ShieldCheck,
-  Sparkles
+  Sparkles,
+  SunMedium,
+  Users
 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { localizedHref } from "@/data/site-content";
@@ -21,10 +25,48 @@ const actionIcons = {
   urgent: AlertTriangle
 };
 
+const puzzleIcons = {
+  message: MessageCircle,
+  shield: ShieldCheck,
+  home: House,
+  sun: SunMedium,
+  key: KeyRound,
+  sparkles: Sparkles,
+  users: Users
+};
+
 export function HomePage({ lang, content }) {
   return (
     <>
       <section className="home-hero">
+        <div className="hero-puzzle-wrap">
+          <div className="hero-puzzle-header">
+            <p className="eyebrow">{content.home.servicePuzzle.eyebrow}</p>
+            <h2>{content.home.servicePuzzle.title}</h2>
+          </div>
+          <div className="hero-puzzle" aria-label={content.home.servicePuzzle.title}>
+            {content.home.servicePuzzle.items.map((item) => {
+              const Icon = puzzleIcons[item.icon] ?? Sparkles;
+
+              return (
+                <Link
+                  className={`hero-puzzle__piece hero-puzzle__piece--${item.color}`}
+                  href={localizedHref(lang, item.href)}
+                  key={item.title}
+                >
+                  <span className="hero-puzzle__icon">
+                    <Icon aria-hidden="true" />
+                  </span>
+                  <strong>{item.title}</strong>
+                  <span className="hero-puzzle__arrow">
+                    <ArrowRight aria-hidden="true" />
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
         <div className="hero-statement">
           <div className="hero-copy">
             <p className="eyebrow">{content.home.eyebrow}</p>

@@ -39,18 +39,42 @@ export function ContentPage({ lang, content, page }) {
         <TreatmentResources lang={lang} page={page} />
       ) : null}
 
-      <section className="section content-sections">
-        {page.sections.map((section) => (
-          <article id={section.id} className="content-block accent-brand" key={section.title}>
-            <div>
-              <span>{section.id ? `#${section.id}` : content.labels.sectionTag}</span>
-              <h2>{section.title}</h2>
-            </div>
-            <p>{section.body}</p>
-            <ArrowRight aria-hidden="true" />
-          </article>
-        ))}
-      </section>
+      {page.layout === "timeline" ? (
+        <section className="section timeline" aria-label={page.title}>
+          {page.sections.map((section, index) => (
+            <article
+              id={section.id}
+              className="timeline-entry"
+              key={section.title}
+            >
+              <div className="timeline-entry__marker" aria-hidden="true">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <div className="timeline-entry__card accent-brand">
+                <div>
+                  <span>{content.labels.sectionTag}</span>
+                  <h2>{section.title}</h2>
+                </div>
+                <p>{section.body}</p>
+                <ArrowRight aria-hidden="true" />
+              </div>
+            </article>
+          ))}
+        </section>
+      ) : (
+        <section className="section content-sections">
+          {page.sections.map((section) => (
+            <article id={section.id} className="content-block accent-brand" key={section.title}>
+              <div>
+                <span>{section.id ? `#${section.id}` : content.labels.sectionTag}</span>
+                <h2>{section.title}</h2>
+              </div>
+              <p>{section.body}</p>
+              <ArrowRight aria-hidden="true" />
+            </article>
+          ))}
+        </section>
+      )}
     </>
   );
 }

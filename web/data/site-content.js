@@ -257,6 +257,54 @@ export const siteContent = {
       },
       heroCardsLabel: "Helstu leiðir",
       quickActionsLabel: "Hröð hjálp",
+      servicePuzzle: {
+        eyebrow: "Þjónustupúsl",
+        title: "Veldu leið eða sjáðu hvernig þjónustan tengist.",
+        items: [
+          {
+            title: "Ráðgjöf",
+            href: "/eg-tharf-hjalp",
+            icon: "message",
+            color: "brand"
+          },
+          {
+            title: "Afeitrun og fyrstu skrefin",
+            href: "/medferd-og-thjonusta#vogur",
+            icon: "shield",
+            color: "yellow"
+          },
+          {
+            title: "Inniliggjandi meðferð",
+            href: "/medferd-og-thjonusta#vik",
+            icon: "home",
+            color: "pink"
+          },
+          {
+            title: "Dagdeildarmeðferð",
+            href: "/medferd-og-thjonusta#gongudeild",
+            icon: "sun",
+            color: "purple"
+          },
+          {
+            title: "Áfangaheimili",
+            href: "/medferdarurraedi",
+            icon: "key",
+            color: "green"
+          },
+          {
+            title: "Barna fræðsla og ráðgjöf",
+            href: "/adstandendur",
+            icon: "sparkles",
+            color: "orange"
+          },
+          {
+            title: "Aðstandenda fræðsla og ráðgjöf",
+            href: "/adstandendur",
+            icon: "users",
+            color: "magenta"
+          }
+        ]
+      },
       principles: {
         eyebrow: "Leiðarljós",
         title: "Vefurinn byrjar á stöðu manneskjunnar, ekki skipuriti stofnunarinnar.",
@@ -760,6 +808,7 @@ export const siteContent = {
         slug: "saga-saa",
         title: "Saga SÁÁ",
         eyebrow: "Frá grasrótarframtaki að landsþjónustu",
+          layout: "timeline",
         intro:
           "Saga SÁÁ er saga samtaka sem urðu til árið 1977 til að bæta aðgengi að meðferð, fræðslu og skilningi á fíknivanda á Íslandi. Hér er einföld tímalína sem dregur saman helstu áfanga út frá aðgengilegum heimildum.",
         ctaLabel: "Sjá Um SÁÁ",
@@ -1019,6 +1068,54 @@ export const siteContent = {
       },
       heroCardsLabel: "Main pathways",
       quickActionsLabel: "Quick help",
+      servicePuzzle: {
+        eyebrow: "Service puzzle",
+        title: "Choose a pathway or see how the services fit together.",
+        items: [
+          {
+            title: "Counselling",
+            href: "/need-help",
+            icon: "message",
+            color: "brand"
+          },
+          {
+            title: "Detox and first steps",
+            href: "/treatment-and-services#vogur",
+            icon: "shield",
+            color: "yellow"
+          },
+          {
+            title: "Residential treatment",
+            href: "/treatment-and-services#vik",
+            icon: "home",
+            color: "pink"
+          },
+          {
+            title: "Day treatment",
+            href: "/treatment-and-services#outpatient",
+            icon: "sun",
+            color: "purple"
+          },
+          {
+            title: "Transitional housing",
+            href: "/treatment-options",
+            icon: "key",
+            color: "green"
+          },
+          {
+            title: "Children’s education and counselling",
+            href: "/families",
+            icon: "sparkles",
+            color: "orange"
+          },
+          {
+            title: "Family education and counselling",
+            href: "/families",
+            icon: "users",
+            color: "magenta"
+          }
+        ]
+      },
       principles: {
         eyebrow: "Principles",
         title: "The website starts with the person’s situation, not the organisation chart.",
@@ -1715,6 +1812,54 @@ export const siteContent = {
       },
       heroCardsLabel: "Główne ścieżki",
       quickActionsLabel: "Szybka pomoc",
+      servicePuzzle: {
+        eyebrow: "Układanka usług",
+        title: "Wybierz ścieżkę albo zobacz, jak łączą się usługi.",
+        items: [
+          {
+            title: "Poradnictwo",
+            href: "/potrzebuje-pomocy",
+            icon: "message",
+            color: "brand"
+          },
+          {
+            title: "Detoks i pierwsze kroki",
+            href: "/leczenie-i-uslugi#vogur",
+            icon: "shield",
+            color: "yellow"
+          },
+          {
+            title: "Leczenie stacjonarne",
+            href: "/leczenie-i-uslugi#vik",
+            icon: "home",
+            color: "pink"
+          },
+          {
+            title: "Leczenie dzienne",
+            href: "/leczenie-i-uslugi#ambulatoryjne",
+            icon: "sun",
+            color: "purple"
+          },
+          {
+            title: "Dom przejściowy",
+            href: "/mozliwosci-leczenia",
+            icon: "key",
+            color: "green"
+          },
+          {
+            title: "Edukacja i poradnictwo dla dzieci",
+            href: "/bliscy",
+            icon: "sparkles",
+            color: "orange"
+          },
+          {
+            title: "Edukacja i poradnictwo dla bliskich",
+            href: "/bliscy",
+            icon: "users",
+            color: "magenta"
+          }
+        ]
+      },
       principles: {
         eyebrow: "Zasady",
         title: "Strona zaczyna od sytuacji człowieka, a nie od struktury organizacji.",
