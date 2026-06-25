@@ -230,8 +230,8 @@ export const siteContent = {
       phoneCta: "Hringja í 530 7600",
       contactCard: {
         eyebrow: "Þarftu aðstoð?",
-        title: "Veldu næsta skref.",
-        intro: "Þú þarft ekki að vita hvaða úrræði passar. Við hjálpum þér að finna leiðina.",
+        title: "Áfengisvandi\u00a0\u00a0\u00a0vímuefnavandi\u00a0\u00a0\u00a0spilavandi",
+        intro: "Ráðgjöf og næstu skref fyrir þig og þína.",
         linkLabel: "Sjá leiðir til að hafa samband",
         href: "/eg-tharf-hjalp",
         actions: [
@@ -258,14 +258,14 @@ export const siteContent = {
       heroCardsLabel: "Helstu leiðir",
       quickActionsLabel: "Hröð hjálp",
       servicePuzzle: {
-        eyebrow: "Þjónustupúsl",
-        title: "Veldu leið eða sjáðu hvernig þjónustan tengist.",
+        title: "Áfengisvandi\u00a0\u00a0\u00a0vímuefnavandi\u00a0\u00a0\u00a0spilavandi",
         items: [
           {
             title: "Ráðgjöf",
             href: "/eg-tharf-hjalp",
             icon: "message",
-            color: "brand"
+            color: "brand",
+            details: ["Barna ráðgjöf", "Aðstandenda ráðgjöf"]
           },
           {
             title: "Afeitrun og fyrstu skrefin",
@@ -283,25 +283,13 @@ export const siteContent = {
             title: "Dagdeildarmeðferð",
             href: "/medferd-og-thjonusta#gongudeild",
             icon: "sun",
-            color: "purple"
+            color: "yellow"
           },
           {
             title: "Áfangaheimili",
             href: "/medferdarurraedi",
             icon: "key",
             color: "green"
-          },
-          {
-            title: "Barna fræðsla og ráðgjöf",
-            href: "/adstandendur",
-            icon: "sparkles",
-            color: "orange"
-          },
-          {
-            title: "Aðstandenda fræðsla og ráðgjöf",
-            href: "/adstandendur",
-            icon: "users",
-            color: "magenta"
           }
         ]
       },
@@ -1069,14 +1057,14 @@ export const siteContent = {
       heroCardsLabel: "Main pathways",
       quickActionsLabel: "Quick help",
       servicePuzzle: {
-        eyebrow: "Service puzzle",
-        title: "Choose a pathway or see how the services fit together.",
+        title: "Alcohol problems, substance use problems, gambling harm",
         items: [
           {
             title: "Counselling",
             href: "/need-help",
             icon: "message",
-            color: "brand"
+            color: "brand",
+            details: ["Children's counselling", "Family counselling"]
           },
           {
             title: "Detox and first steps",
@@ -1101,18 +1089,6 @@ export const siteContent = {
             href: "/treatment-options",
             icon: "key",
             color: "green"
-          },
-          {
-            title: "Children’s education and counselling",
-            href: "/families",
-            icon: "sparkles",
-            color: "orange"
-          },
-          {
-            title: "Family education and counselling",
-            href: "/families",
-            icon: "users",
-            color: "magenta"
           }
         ]
       },
@@ -1813,14 +1789,14 @@ export const siteContent = {
       heroCardsLabel: "Główne ścieżki",
       quickActionsLabel: "Szybka pomoc",
       servicePuzzle: {
-        eyebrow: "Układanka usług",
-        title: "Wybierz ścieżkę albo zobacz, jak łączą się usługi.",
+        title: "Problemy alkoholowe, problemy z substancjami, szkody związane z hazardem",
         items: [
           {
             title: "Poradnictwo",
             href: "/potrzebuje-pomocy",
             icon: "message",
-            color: "brand"
+            color: "brand",
+            details: ["Poradnictwo dla dzieci", "Poradnictwo dla bliskich"]
           },
           {
             title: "Detoks i pierwsze kroki",
@@ -1845,18 +1821,6 @@ export const siteContent = {
             href: "/mozliwosci-leczenia",
             icon: "key",
             color: "green"
-          },
-          {
-            title: "Edukacja i poradnictwo dla dzieci",
-            href: "/bliscy",
-            icon: "sparkles",
-            color: "orange"
-          },
-          {
-            title: "Edukacja i poradnictwo dla bliskich",
-            href: "/bliscy",
-            icon: "users",
-            color: "magenta"
           }
         ]
       },

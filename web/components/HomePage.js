@@ -3,16 +3,16 @@ import Link from "next/link";
 import {
   AlertTriangle,
   ArrowRight,
-  House,
   HeartHandshake,
-  KeyRound,
   LifeBuoy,
   MessageCircle,
   PhoneCall,
   ShieldCheck,
   Sparkles,
   SunMedium,
-  Users
+  Users,
+  House,
+  KeyRound
 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { localizedHref } from "@/data/site-content";
@@ -25,7 +25,7 @@ const actionIcons = {
   urgent: AlertTriangle
 };
 
-const puzzleIcons = {
+const serviceBandIcons = {
   message: MessageCircle,
   shield: ShieldCheck,
   home: House,
@@ -39,26 +39,36 @@ export function HomePage({ lang, content }) {
   return (
     <>
       <section className="home-hero">
-        <div className="hero-puzzle-wrap">
-          <div className="hero-puzzle-header">
-            <p className="eyebrow">{content.home.servicePuzzle.eyebrow}</p>
+        <div className="service-band-wrap">
+          <div className="service-band-header">
             <h2>{content.home.servicePuzzle.title}</h2>
           </div>
-          <div className="hero-puzzle" aria-label={content.home.servicePuzzle.title}>
+          <div className="service-band" aria-label={content.home.servicePuzzle.title}>
             {content.home.servicePuzzle.items.map((item) => {
-              const Icon = puzzleIcons[item.icon] ?? Sparkles;
+              const Icon = serviceBandIcons[item.icon] ?? Sparkles;
 
               return (
                 <Link
-                  className={`hero-puzzle__piece hero-puzzle__piece--${item.color}`}
+                  className={`service-band__item service-band__item--${item.color}`}
                   href={localizedHref(lang, item.href)}
                   key={item.title}
                 >
-                  <span className="hero-puzzle__icon">
-                    <Icon aria-hidden="true" />
+                  <span className="service-band__main">
+                    <span className="service-band__icon">
+                      <Icon aria-hidden="true" />
+                    </span>
+                    <span className="service-band__text">
+                      <strong>{item.title}</strong>
+                      {item.details?.length ? (
+                        <span className="service-band__details" aria-hidden="true">
+                          {item.details.map((detail) => (
+                            <span key={detail}>{detail}</span>
+                          ))}
+                        </span>
+                      ) : null}
+                    </span>
                   </span>
-                  <strong>{item.title}</strong>
-                  <span className="hero-puzzle__arrow">
+                  <span className="service-band__arrow">
                     <ArrowRight aria-hidden="true" />
                   </span>
                 </Link>
@@ -91,45 +101,6 @@ export function HomePage({ lang, content }) {
               </ButtonLink>
             </div>
           </div>
-          <aside className="hero-contact-card">
-            <p>{content.home.contactCard.eyebrow}</p>
-            <h2>{content.home.contactCard.title}</h2>
-            <span>{content.home.contactCard.intro}</span>
-            <div className="hero-contact-actions">
-              {content.home.contactCard.actions.map((action) => {
-                const Icon = actionIcons[action.icon] ?? MessageCircle;
-
-                return (
-                  <SmartLink href={action.href} lang={lang} key={action.title}>
-                    <span className="hero-contact-action__icon">
-                      <Icon aria-hidden="true" />
-                    </span>
-                    <span>
-                      <strong>{action.title}</strong>
-                      <small>{action.text}</small>
-                    </span>
-                  </SmartLink>
-                );
-              })}
-            </div>
-          </aside>
-        </div>
-        <div className="hero-card-grid" aria-label={content.home.heroCardsLabel}>
-          {content.heroCards.map((card) => (
-            <Link className="image-card" href={localizedHref(lang, card.href)} key={card.title}>
-              <Image
-                src={card.image}
-                alt={card.title}
-                fill
-                sizes="(max-width: 900px) 33vw, 100vw"
-                priority
-              />
-              <span className="image-card__content">
-                <span>{card.eyebrow}</span>
-                <strong>{card.title}</strong>
-              </span>
-            </Link>
-          ))}
         </div>
       </section>
 
